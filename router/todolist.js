@@ -1,8 +1,8 @@
 import express, { Router } from "express";
-// import {gettodoList} from '../'
+import {gettodoList} from '../controller/todolistController.js'
 
 const router = express.Router()
 
-router.get('/', (req, res) => res.send('todolist page'))
+router.get('/', gettodoList)
 
 export default router
