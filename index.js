@@ -13,6 +13,9 @@ app.use(express.urlencoded({extended: true}))
 app.use(cors())
 
 app.use('/todolist', todolistRouter)
+app.get('/', (req, res) => {
+    return res.send('welcome to todolist backend api')
+})
 
 const port = process.env.PORT
 
